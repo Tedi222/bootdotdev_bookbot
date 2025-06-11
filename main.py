@@ -4,6 +4,11 @@ def get_book_text(book_path):
     
     return book_contents
 
+def get_words_num(text):
+    words = text.split()
+    return len(words)
+
 if __name__ == "__main__":
     book = get_book_text("./books/frankenstein.txt")
-    print(book)
+    num_words = get_words_num(book)
+    print(f"{num_words} words found in the document")
